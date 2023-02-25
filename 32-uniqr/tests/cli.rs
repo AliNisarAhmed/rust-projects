@@ -168,6 +168,7 @@ fn run_outfile(test: &Test) -> TestResult {
         .stdout("");
 
     let contents = fs::read_to_string(&outpath)?;
+    print!("{}", &contents);
     assert_eq!(&expected, &contents);
 
     Ok(())
