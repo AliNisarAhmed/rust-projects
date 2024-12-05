@@ -6,10 +6,10 @@ use clap::Parser;
 #[command(version = "1.0")]
 #[command(about = "Rust echo", long_about = None)]
 struct Args {
-    #[arg(help = "Input text", required = true)]
+    #[arg(help = "Input text", required = true, value_name = "TEXT")]
     text: Vec<String>,
 
-    #[arg(short = 'n', long)]
+    #[arg(help = "Do not print newline", short = 'n', long)]
     omit_newline: bool,
 }
 
